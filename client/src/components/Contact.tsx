@@ -22,30 +22,31 @@ export default function Contact() {
     {
       icon: Mail,
       label: 'Email',
-      value: 'zaroon@example.com',
-      link: 'mailto:zaroon@example.com',
+      value: 'zaroonalichishti@gmail.com',
+      link: 'mailto:zaroonalichishti@gmail.com',
       color: 'text-blue-400',
     },
     {
       icon: Phone,
       label: 'Phone',
-      value: '+92 (XXX) XXX-XXXX',
-      link: 'tel:+92',
+      value: '+92 (305) 6529811',
+      link: 'tel:+923056529811',
       color: 'text-green-400',
     },
     {
       icon: MessageSquare,
       label: 'WhatsApp',
       value: 'Available',
-      link: 'https://wa.me/92',
+      link: 'https://wa.me/923056529811',
       color: 'text-cyan-400',
     },
   ];
 
   const socialLinks = [
-    { icon: Linkedin, label: 'LinkedIn', link: 'https://linkedin.com', color: 'hover:text-blue-400' },
-    { icon: Github, label: 'GitHub', link: 'https://github.com', color: 'hover:text-gray-300' },
-    { icon: Mail, label: 'Email', link: 'mailto:zaroon@example.com', color: 'hover:text-red-400' },
+    { icon: Linkedin, label: 'LinkedIn', link: 'https://www.linkedin.com/in/zaroon-ali/', color: 'hover:text-blue-400' },
+    { icon: Github, label: 'GitHub', link: 'https://github.com/SyedZaroon', color: 'hover:text-gray-300' },
+    { icon: Github, label: 'Fiverr', link: 'https://www.fiverr.com/zaroonchishti/', color: 'hover:text-green-400' },
+    { icon: Mail, label: 'Email', link: 'mailto:zaroonalichishti@gmail.com', color: 'hover:text-red-400' },
   ];
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -135,21 +136,49 @@ export default function Contact() {
               <p className="text-sm text-gray-400 mb-4">Follow me on social media</p>
               <div className="flex gap-4">
                 {socialLinks.map((social, i) => {
-                  const Icon = social.icon;
-                  return (
-                    <motion.a
-                      key={i}
-                      href={social.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`w-12 h-12 glass-card rounded-lg flex items-center justify-center text-gray-400 transition-all ${social.color}`}
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      <Icon size={20} />
-                    </motion.a>
-                  );
-                })}
+  const Icon = social.icon;
+
+  return social.label === "Fiverr" ? (
+    <motion.a
+      key={i}
+      href={social.link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`w-12 h-12 glass-card rounded-lg flex items-center justify-center text-gray-400 transition-all ${social.color}`}
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.95 }}
+    >
+      <svg
+        width={20}
+        height={20}
+        viewBox="0 0 192 192"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+      >
+        <path d="M0 0h192v192H0z" fill="none" />
+        <path
+          d="M121.1 170h34.75V67.04H90.21v-7.72s0-9.01 9.01-9.01h21.88V22H99.22s-43.76 0-43.76 37.32v7.72h-19.3v28.31h19.3v74.64h34.75V95.36h30.89V170Z"
+          stroke="currentColor"
+          strokeWidth={12}
+          strokeLinejoin="round"
+          fill="none"
+        />
+      </svg>
+    </motion.a>
+  ) : (
+    <motion.a
+      key={i}
+      href={social.link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`w-12 h-12 glass-card rounded-lg flex items-center justify-center text-gray-400 transition-all ${social.color}`}
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.95 }}
+    >
+      <Icon size={20} />
+    </motion.a>
+  );
+})}
               </div>
             </div>
           </motion.div>

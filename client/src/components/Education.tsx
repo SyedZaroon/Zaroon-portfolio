@@ -13,7 +13,7 @@ export default function Education() {
     {
       degree: 'Bachelor of Computer Science',
       institution: 'University of the Punjab',
-      year: '2018 - 2022',
+      year: '2015 - 2019',
       description: 'Comprehensive computer science education with focus on web development and software engineering.',
       icon: GraduationCap,
     },
@@ -95,7 +95,7 @@ export default function Education() {
           })}
 
           {/* Certifications */}
-          <motion.div variants={itemVariants}>
+          {/* <motion.div variants={itemVariants}>
             <h3 className="text-2xl font-bold text-white mb-4">Professional Certifications</h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {certifications.map((cert, i) => (
@@ -108,7 +108,7 @@ export default function Education() {
                 </motion.div>
               ))}
             </div>
-          </motion.div>
+          </motion.div> */}
         </motion.div>
       </div>
     </section>

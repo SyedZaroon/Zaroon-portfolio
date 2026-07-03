@@ -26,6 +26,8 @@ export default function Hero() {
     { name: 'JavaScript', delay: 0.3 },
     { name: 'Tailwind', delay: 0.4 },
     { name: 'GraphQL', delay: 0.5 },
+    { name: 'Hydrogen', delay: 0.6 },
+    { name: 'Polaris', delay: 0.7 },
   ];
 
   const containerVariants = {
@@ -165,7 +167,7 @@ export default function Hero() {
             View Projects <ArrowRight size={20} />
           </motion.a>
           <motion.a
-            href="#contact"
+            href="http://wa.me/923056529811"
             className="px-8 py-4 border border-blue-500/50 text-white font-semibold rounded-lg hover:bg-blue-500/10 transition-all"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -173,8 +175,8 @@ export default function Hero() {
             Get in Touch
           </motion.a>
           <motion.a
-            href="#"
-            className="px-8 py-4 border border-purple-500/50 text-white font-semibold rounded-lg hover:bg-purple-500/10 transition-all flex items-center justify-center gap-2"
+            href="../../public/docs/Zaroon_CV.pdf"
+            download            className="px-8 py-4 border border-purple-500/50 text-white font-semibold rounded-lg hover:bg-purple-500/10 transition-all flex items-center justify-center gap-2"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >

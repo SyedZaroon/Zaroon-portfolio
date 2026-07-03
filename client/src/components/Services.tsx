@@ -117,11 +117,6 @@ export default function Services() {
                   {service.description}
                 </p>
 
-                {/* Hover Arrow */}
-                <div className="mt-4 flex items-center gap-2 text-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity">
-                  <span className="text-sm font-medium">Learn more</span>
-                  <span className="group-hover:translate-x-2 transition-transform">→</span>
-                </div>
               </motion.div>
             );
           })}

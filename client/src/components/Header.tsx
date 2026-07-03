@@ -46,15 +46,8 @@ export default function Header() {
             className="flex items-center gap-2 group"
             whileHover={{ scale: 1.05 }}
           >
-            <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center">
-              <img
-                src="/manus-storage/zaroon-logo_c522d069.png"
-                alt="Zaroon"
-                className="w-6 h-6"
-              />
-            </div>
             <span className="text-lg font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              Zaroon
+              Syed Zaroon Ali
             </span>
           </motion.a>
 
@@ -75,7 +68,7 @@ export default function Header() {
 
           {/* CTA Button */}
           <motion.a
-            href="#contact"
+            href="http://wa.me/923056529811"
             className="hidden md:flex items-center gap-2 px-6 py-2 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-medium hover:shadow-lg hover:shadow-blue-500/50 transition-all"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}

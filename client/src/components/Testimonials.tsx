@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Star } from 'lucide-react';
+import { testimonials } from '../globalValues/testimonials';
+
 
 /**
  * Testimonials Section
@@ -9,32 +11,7 @@ import { Star } from 'lucide-react';
 export default function Testimonials() {
   const { ref, inView } = useInView({ threshold: 0.2, triggerOnce: true });
 
-  const testimonials = [
-    {
-      name: 'Ahmed Hassan',
-      role: 'E-commerce Manager',
-      company: 'Global Retail Co',
-      text: 'Zaroon transformed our Shopify store with exceptional attention to detail. The performance improvements were immediate and the custom features exceeded our expectations.',
-      rating: 5,
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop',
-    },
-    {
-      name: 'Sarah Williams',
-      role: 'Product Director',
-      company: 'Digital Innovations',
-      text: 'Working with Zaroon was a game-changer. His technical expertise combined with his understanding of UX made him invaluable to our project.',
-      rating: 5,
-      image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop',
-    },
-    {
-      name: 'Marcus Chen',
-      role: 'CEO',
-      company: 'Tech Startups Inc',
-      text: 'Zaroon delivered a React dashboard that perfectly met our requirements. His communication and problem-solving skills are outstanding.',
-      rating: 5,
-      image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop',
-    },
-  ];
+
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -106,17 +83,10 @@ export default function Testimonials() {
 
               {/* Client Info */}
               <div className="flex items-center gap-4 pt-6 border-t border-white/10">
-                <div className="w-12 h-12 rounded-full overflow-hidden flex-shrink-0">
-                  <img
-                    src={testimonial.image}
-                    alt={testimonial.name}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
                 <div>
                   <p className="text-white font-semibold text-sm">{testimonial.name}</p>
                   <p className="text-gray-400 text-xs">
-                    {testimonial.role} at {testimonial.company}
+                    {testimonial.platform}
                   </p>
                 </div>
               </div>

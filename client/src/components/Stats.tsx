@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import CountUp from 'react-countup';
+import { stats } from '../globalValues/state';
 
 /**
  * Stats Section
@@ -9,12 +10,6 @@ import CountUp from 'react-countup';
 export default function Stats() {
   const { ref, inView } = useInView({ threshold: 0.2, triggerOnce: true });
 
-  const stats = [
-    { label: 'Years Experience', value: 4, suffix: '+' },
-    { label: 'Completed Projects', value: 50, suffix: '+' },
-    { label: 'Happy Clients', value: 20, suffix: '+' },
-    { label: 'Development Hours', value: 1000, suffix: '+' },
-  ];
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -76,7 +71,7 @@ export default function Stats() {
                       duration={2.5}
                       separator=","
                     />
-                    {stat.suffix}
+                    +
                   </>
                 ) : (
                   '0'

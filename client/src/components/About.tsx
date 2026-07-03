@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import CountUp from 'react-countup';
 import { useInView } from 'react-intersection-observer';
+import { stats } from '../globalValues/state';
 
 /**
  * About Section
@@ -9,12 +10,6 @@ import { useInView } from 'react-intersection-observer';
 export default function About() {
   const { ref, inView } = useInView({ threshold: 0.2, triggerOnce: true });
 
-  const stats = [
-    { label: 'Years Experience', value: 4 },
-    { label: 'Shopify Experience', value: 2.5 },
-    { label: 'Completed Projects', value: 50 },
-    { label: 'Happy Clients', value: 20 },
-  ];
 
   const skills = [
     'Performance-focused Development',
@@ -61,7 +56,7 @@ export default function About() {
           <motion.div variants={itemVariants} className="relative">
             <div className="relative aspect-square rounded-2xl overflow-hidden glass-card p-2">
               <img
-                src="/manus-storage/about-section-image_6a6a8975.png"
+                src="../../public/images/about_me_img.png"
                 alt="Syed Zaroon Ali Chishti"
                 className="w-full h-full object-cover rounded-xl"
               />
@@ -109,7 +104,7 @@ export default function About() {
                     {inView ? (
                       <>
                         <CountUp end={stat.value} duration={2} decimals={stat.value % 1 !== 0 ? 1 : 0} />
-                        {stat.label.includes('Years') || stat.label.includes('Shopify') ? '+' : ''}
+                        {'+'}
                       </>
                     ) : (
                       '0'
