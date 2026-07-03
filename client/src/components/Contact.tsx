@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Mail, Phone, MapPin, Linkedin, Github, MessageSquare } from 'lucide-react';
 import { useState } from 'react';
+import { toast } from 'sonner';
 
 /**
  * Contact Section
@@ -11,6 +12,7 @@ export default function Contact() {
   const { ref, inView } = useInView({ threshold: 0.2, triggerOnce: true });
   const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const contactInfo = [
     {
@@ -49,10 +51,41 @@ export default function Contact() {
     { icon: Mail, label: 'Email', link: 'mailto:zaroonalichishti@gmail.com', color: 'hover:text-red-400' },
   ];
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 3000);
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: '8496a662-e4f0-475f-a22f-740f1ad10908',
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        }),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        toast.success('Message sent successfully!');
+        setFormData({ name: '', email: '', subject: '', message: '' });
+        setSubmitted(true);
+        setTimeout(() => setSubmitted(false), 3000);
+      } else {
+        toast.error(result.message || 'Failed to send message. Please try again.');
+      }
+    } catch {
+      toast.error('Failed to send message. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const containerVariants = {
@@ -236,11 +269,12 @@ export default function Contact() {
 
               <motion.button
                 type="submit"
-                className="w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-cyan-500/50 transition-all"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
+                disabled={isSubmitting}
+                className="w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-cyan-500/50 transition-all disabled:opacity-70 disabled:cursor-not-allowed"
+                whileHover={isSubmitting ? undefined : { scale: 1.02 }}
+                whileTap={isSubmitting ? undefined : { scale: 0.98 }}
               >
-                {submitted ? 'Message Sent! 🎉' : 'Send Message'}
+                {isSubmitting ? 'Sending...' : submitted ? 'Message Sent!' : 'Send Message'}
               </motion.button>
             </form>
           </motion.div>
