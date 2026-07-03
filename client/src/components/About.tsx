@@ -56,7 +56,7 @@ export default function About() {
           <motion.div variants={itemVariants} className="relative">
             <div className="relative aspect-square rounded-2xl overflow-hidden glass-card p-2">
               <img
-                src="../../public/images/about_me_img.png"
+                src="../images/about_me_img.png"
                 alt="Syed Zaroon Ali Chishti"
                 className="w-full h-full object-cover rounded-xl"
               />

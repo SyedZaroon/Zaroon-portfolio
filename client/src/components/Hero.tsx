@@ -175,7 +175,7 @@ export default function Hero() {
             Get in Touch
           </motion.a>
           <motion.a
-            href="../../public/docs/Zaroon_CV.pdf"
+            href="../docs/Zaroon_CV.pdf"
             download            className="px-8 py-4 border border-purple-500/50 text-white font-semibold rounded-lg hover:bg-purple-500/10 transition-all flex items-center justify-center gap-2"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
