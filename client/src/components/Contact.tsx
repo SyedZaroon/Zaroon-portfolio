@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useState } from 'react';
 import { toast } from 'sonner';
-import { contactInfo } from '../globalValues/contactinfo';
+import { contactInfo } from '../globalValues/contactInfo';
 import { socialLinks } from '../globalValues/socialLinks';
 
 /**
