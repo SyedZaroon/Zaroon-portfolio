@@ -1,8 +1,9 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Mail, Phone, MapPin, Linkedin, Github, MessageSquare } from 'lucide-react';
 import { useState } from 'react';
 import { toast } from 'sonner';
+import { contactInfo } from '../globalValues/contactinfo';
+import { socialLinks } from '../globalValues/socialLinks';
 
 /**
  * Contact Section
@@ -14,42 +15,9 @@ export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const contactInfo = [
-    {
-      icon: MapPin,
-      label: 'Location',
-      value: 'Lahore, Pakistan',
-      color: 'text-red-400',
-    },
-    {
-      icon: Mail,
-      label: 'Email',
-      value: 'zaroonalichishti@gmail.com',
-      link: 'mailto:zaroonalichishti@gmail.com',
-      color: 'text-blue-400',
-    },
-    {
-      icon: Phone,
-      label: 'Phone',
-      value: '+92 (305) 6529811',
-      link: 'tel:+923056529811',
-      color: 'text-green-400',
-    },
-    {
-      icon: MessageSquare,
-      label: 'WhatsApp',
-      value: 'Available',
-      link: 'https://wa.me/923056529811',
-      color: 'text-cyan-400',
-    },
-  ];
 
-  const socialLinks = [
-    { icon: Linkedin, label: 'LinkedIn', link: 'https://www.linkedin.com/in/zaroon-ali/', color: 'hover:text-blue-400' },
-    { icon: Github, label: 'GitHub', link: 'https://github.com/SyedZaroon', color: 'hover:text-gray-300' },
-    { icon: Github, label: 'Fiverr', link: 'https://www.fiverr.com/zaroonchishti/', color: 'hover:text-green-400' },
-    { icon: Mail, label: 'Email', link: 'mailto:zaroonalichishti@gmail.com', color: 'hover:text-red-400' },
-  ];
+
+
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -63,7 +31,7 @@ export default function Contact() {
           Accept: 'application/json',
         },
         body: JSON.stringify({
-          access_key: '8496a662-e4f0-475f-a22f-740f1ad10908',
+          access_key: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY,
           name: formData.name,
           email: formData.email,
           subject: formData.subject,
