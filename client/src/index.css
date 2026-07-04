@@ -256,3 +256,32 @@
     background: #8B5CF6;
   }
 }
+
+.mySwiper .swiper-pagination-bullet {
+  background: #8B5CF6;
+}
+
+.mySwiper .swiper-pagination-bullet-active {
+
+  background: #3B82F6;
+}
+
+.swiper {
+  position: relative;
+}
+
+.swiper-button-next {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.swiper-button-prev {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%) rotate(180deg);
+  z-index: 10;
+}
