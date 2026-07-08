@@ -34,7 +34,7 @@ export const projects = [
     description:
       "Developed a custom Shopify app that transforms selected product variants into individual products on collection pages, providing a cleaner browsing experience and improving product discoverability.",
     tech: ["React", "Shadcn UI", "GraphQL API", "PostgreSQL"],
-    image: "/images/the-powerhose.png",
+    image: "/images/variantAsProduct.png",
     github: "https://github.com/SyedZaroon/variant-as-products",
   },
   {

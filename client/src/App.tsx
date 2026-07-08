@@ -5,6 +5,7 @@ import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import ScrollProgress from "./components/ScrollProgress";
 import { ThemeProvider } from "./contexts/ThemeContext";
+import FloatingContactMenu from "./components/FloatingContactMenu";
 import Home from "./pages/Home";
 
 
@@ -35,6 +36,7 @@ function App() {
           <ScrollProgress />
           <Toaster />
           <Router />
+          <FloatingContactMenu />
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>
