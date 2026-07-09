@@ -10,6 +10,7 @@ export const projects = [
     image: "/images/MD-Img.png",
     link: "https://mobiledirectonline.co.uk/",
   },
+
   {
     title: "Shopify Store Development",
     project_name: "PackPoint",
@@ -18,6 +19,15 @@ export const projects = [
     tech: ["Shopify", "Liquid", "JavaScript"],
     image: "/images/packpoint.png",
     link: "https://packpointstore.myshopify.com/",
+  },
+  {
+    title: "Shopify Store Development",
+    project_name: "Refurbi",
+    description:
+      "Developed a custom Shopify storefront by transforming a Figma design into a fully responsive e-commerce experience using Shopify Liquid.",
+    tech: ["Shopify", "Liquid", "JavaScript"],
+    image: "/images/refurbi.png",
+    github: "https://github.com/SyedZaroon/Refurbi",
   },
   {
     title: "Shopify Store Development",
