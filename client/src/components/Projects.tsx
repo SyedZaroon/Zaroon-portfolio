@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { ExternalLink, Github } from 'lucide-react';
-import { projects } from "../globalValues/projects";
+import { projects } from "../data/projects";
 
 
 export default function Projects() {

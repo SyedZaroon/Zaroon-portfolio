@@ -1,5 +1,3 @@
-
-
 export const projects = [
   {
     title: "Shopify Store Development",
@@ -82,5 +80,14 @@ export const projects = [
     tech: ["WordPress", "Elementor"],
     image: "/images/futuremigrate.png",
     link: "https://futuremigrate.com/",
+  },
+  {
+    title: "Hydrogen React",
+    project_name: "PackPoint",
+    description:
+      "Converted a custom Figma design into a responsive WordPress website using Elementor, delivering a pixel-perfect layout with modern UI, reusable sections, and optimized performance.",
+    tech: ["Hygrogen", "React", "StorefrontApi", "Tailwind"],
+    image: "/images/packpoint-hydrogen.png",
+    github: "https://github.com/SyedZaroon/Kicks-Hygrogen",
   },
 ];

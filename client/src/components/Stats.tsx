@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import CountUp from 'react-countup';
-import { stats } from '../globalValues/state';
+import { stats } from "../data/state";
 
 /**
  * Stats Section

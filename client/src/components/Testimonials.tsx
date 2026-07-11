@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Star } from 'lucide-react';
-import { testimonials } from '../globalValues/testimonials';
+import { testimonials } from "../data/testimonials";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
