@@ -133,7 +133,7 @@ export default function Hero() {
               1000,
               'Headless Commerce Developer',
               1000,
-              'React Engineer',
+              'React Developer',
               1000,
               'Frontend Specialist',
               1000,
