@@ -60,7 +60,7 @@ export default function Hero() {
           className="w-full h-full object-cover"
         />
         {/* Overlay for depth */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/40" />
+        <div className="absolute inset-0 bg-linner-to-b from-transparent via-transparent to-black/40" />
       </div>
 
       {/* Cursor Glow Effect */}
@@ -115,10 +115,10 @@ export default function Hero() {
         {/* Main Heading */}
         <motion.h1
           variants={itemVariants}
-          className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-200 to-cyan-200 bg-clip-text text-transparent"
+          className="text-5xl md:text-7xl font-bold mb-6 bg-linear-to-r from-white via-blue-200 to-cyan-200 bg-clip-text text-transparent"
         >
           Hi, I'm <br />
-          <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+          <span className="bg-linear-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
             Syed Zaroon Ali Chishti
           </span>
         </motion.h1>
@@ -160,7 +160,7 @@ export default function Hero() {
         >
           <motion.a
             href="#projects"
-            className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg flex items-center justify-center gap-2 hover:shadow-lg hover:shadow-blue-500/50 transition-all"
+            className="px-8 py-4 bg-linear-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg flex items-center justify-center gap-2 hover:shadow-lg hover:shadow-blue-500/50 transition-all"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
