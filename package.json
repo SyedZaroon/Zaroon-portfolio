@@ -4,9 +4,9 @@
   "type": "module",
   "license": "MIT",
   "scripts": {
-    "dev": "vite --host",
+    "dev": "node api.js && vite --host",
     "build": "vite build",
-    "start": "vite preview --host",
+    "start": "node api.js && vite preview --host",
     "preview": "vite preview --host",
     "check": "tsc --noEmit",
     "format": "prettier --write ."
